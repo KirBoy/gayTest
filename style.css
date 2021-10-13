@@ -1,0 +1,176 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  cursor: pointer;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 250px;
+  border: 1px solid #000;
+}
+
+.box__inner {
+  width: 400px;
+}
+
+.box__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box__button {
+  width: 100px;
+  padding: 10px 0;
+}
+
+.box__close {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 33px;
+  height: 33px;
+  background-color: #ff2222;
+  border: none;
+}
+
+.box__close::after {
+  position: absolute;
+  left: 39%;
+  top: 1px;
+  content: '';
+  width: 20px;
+  height:  20px;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg);
+}
+
+.box__close::before {
+  position: absolute;
+  left: 0px;
+  top: 1px;
+  content: '';
+  width: 20px;
+  height:  20px;
+  border-bottom: 3px solid #fff;
+  transform: rotate(-45deg);
+}
+
+.box__title {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+
+.active::after {
+  display: none;
+}
+
+.active::before {
+  display: none;
+}
+
+.gachi {
+  width: 100vw;
+  height: 100vh;
+}
+
+.congrats {
+  position: absolute;
+  font-size: 35px;
+  font-weight: 600;
+  animation: grats 2s 0ms  alternate infinite;
+}
+
+@keyframes grats {   
+  0% {     
+    transform: scale(1);  
+  }   
+
+  100% {
+    transform: scale(4);  
+   }
+}
+
+.grats {
+  position: absolute;
+  left: 0;
+  bottom: 60px;
+  font-size: 26px;
+  font-weight: 600;
+  animation: go 7s 0ms  alternate infinite;
+}
+
+@keyframes go {   
+  0% {
+    left: 0;
+    transform: scale(1);  
+  }   
+
+  100% {
+    left: 70%;
+    transform: scale(4);  
+   }
+}
+
+.dick {
+  width: 300px;
+  position: absolute;
+  right: 0;
+}
